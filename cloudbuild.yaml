@@ -3,10 +3,3 @@ steps:
   entrypoint: 'dotnet'
   args: [ 'publish', '-c', 'Release' ]
   dir: vamsikamal05/aspnetcoremvchelloworld/HelloWorld
-  # Build the app image.
-- name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/aspnetcorehelloworld/testapp:3.1', '.' ]
-  dir: './bin/Release/netcoreapp2.1/publish'
-
-# Publish the app.
-images: [ 'gcr.io/aspnetcorehelloworld/testapp:3.1' ]
